@@ -49,7 +49,7 @@
   });*/
 
 	var ListView = Backbone.View.extend({
-		el: $('#page1'), // el attaches to existing element
+		el: $('script'), // el attaches to existing element
 
 		events: {
 			'click button#add': 'addItem'
