@@ -1,21 +1,20 @@
 <!doctype html><html class="ui-mobile-rendering"><head>    <title>Moodle Plus</title>    <meta name="viewport" content="width=device-width, initial-scale=1">	<link rel="stylesheet" href="css/jquery.mobile-1.0.1.min.css"/>
-    <!-- The Templates -->    <script type="text/template" id="home">		<div data-theme="a" data-role="header">            <img src="home.gif" width="36" height="35"><h1>Moodle Plus</h1>        </div>
+    <!-- The Templates -->    <script type="text/template" id="home">		<div data-theme="d" data-role="header">            <img src="home.gif" width="36" height="35"><h1>Moodle Plus</h1>        </div>
         <div data-role="content">			<ul data-role="listview"  data-inset="true">				<li>Search: <textarea name="" id="textarea1" placeholder=""></textarea></li>			</ul>            <h3>Home Page</h3>            <p>This is the Home page. It was created dynamically using an underscore.js template.</p>            <p>Navigate to:</p>            <ul data-role="listview"  data-inset="true">                <li><a href="#page1">Notes</a></li>                <li><a href="#page2">Attendance</a></li>            </ul>        </div>
-		<div data-theme="a" data-role="footer" data-position="fixed">			<h3>				Moodle Plus			</h3>		</div>
+		<div data-theme="d" data-role="footer" data-position="fixed">			<h3>				Moodle Plus			</h3>		</div>
     </script>
-    <script type="text/template" id="page1">
-        <div data-theme="a" data-role="header">            <a href="#" data-icon="back" class="back ui-btn-left">Back</a>            <h1>Notes</h1>        </div>
-        <div data-role="content">			<div data-role="fieldcontain">				<fieldset data-role="controlgroup">            		<label for="textarea1">This is the notes page</label>					<p><img src="page1.gif" width="72" height="70"></p>					<textarea name="" id="textarea1" placeholder=""></textarea>				</fieldset>			</div>			<input value="Submit" type="submit" />            <p>Navigate to:</p>            <ul data-role="listview" data-inset="true">                <li><a href="#">Home</a></li>                <li><a href="#page2">Attendance</a></li>            </ul>
+    <script type="text/template" id="page1" src="js/addentry.js">        <div data-theme="d" data-role="header">            <a href="#" data-icon="back" class="back ui-btn-left">Back</a>            <h1>Notes</h1>        </div>
+        <div data-role="content">			<div data-role="fieldcontain">				<fieldset data-role="controlgroup">            		<label for="textarea1">This is the notes page</label>					<p><img src="page1.gif" width="72" height="70"></p>					<textarea name="textarea1" id="textarea1" placeholder=""></textarea>				</fieldset>			</div>			<input type=button name="add" id="add" value="Submit" />            <p>Navigate to:</p>            <ul data-role="listview" data-inset="true">                <li><a href="#">Home</a></li>                <li><a href="#page2">Attendance</a></li>            </ul>
         </div>
-		<div data-theme="a" data-role="footer" data-position="fixed">			<h3>				Moodle Plus			</h3>		</div>
+		<div data-theme="d" data-role="footer" data-position="fixed">			<h3>				Moodle Plus			</h3>		</div>
     </script>
     <script type="text/template" id="page2">
-        <div data-theme="a" data-role="header">            <a href="#" data-icon="back" class="back ui-btn-left">Back</a>            <h1>Attendance</h1>        </div>
+        <div data-theme="d" data-role="header">            <a href="#" data-icon="back" class="back ui-btn-left">Back</a>            <h1>Attendance</h1>        </div>
         <div data-role="content">            <div id="checkboxes1" data-role="fieldcontain">            	<fieldset data-role="controlgroup" data-type="vertical">					<legend>Choose:</legend>					<input id="checkbox1" name="" type="checkbox" />					<label for="checkbox1">						Student 1					</label>					<input id="checkbox2" name="" type="checkbox" />					<label for="checkbox2">						Student 2					</label>					<input id="checkbox3" name="" type="checkbox" />					<label for="checkbox3">						Student 3					</label>					<input id="checkbox4" name="" type="checkbox" />					<label for="checkbox4">						Student 4					</label>				</fieldset>			</div>			<p><img src="page2.gif" width="72" height="70"></p>			<input value="Submit" type="submit" />            <p>Navigate to:</p>            <ul data-role="listview" data-inset="true">                <li><a href="#">Home</a></li>                <li><a href="#page1">Notes</a></li>            </ul>
         </div>
-		<div data-theme="a" data-role="footer" data-position="fixed">			<h3>				Moodle Plus			</h3>		</div>
+		<div data-theme="d" data-role="footer" data-position="fixed">			<h3>				Moodle Plus			</h3>		</div>
     </script>
     <!-- The Scripts -->
-    <script src="lib/jquery-1.7.1.min.js"></script>    <script src="js/jqm-config.js"></script>    <script src="lib/jquery.mobile-1.0.1.min.js"></script>    <script src="lib/underscore-min.js"></script>    <script src="lib/backbone-min.js"></script>    <script src="js/main.js"></script>
+    <script src="lib/jquery-1.7.1.min.js"></script>    <script src="js/jqm-config.js"></script>    <script src="lib/jquery.mobile-1.0.1.min.js"></script>    <script src="lib/underscore-min.js"></script>    <script src="lib/backbone-min.js"></script>    <script src="js/main.js"></script>	<script src="js/addentry.js"></script>
 </head>
 <body>Loading, please wait...</body></html>
