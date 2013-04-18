@@ -1,13 +1,12 @@
 (function($){
-/*
+
   Backbone.sync = function(method, model, success, error){ 
     success();
   }
   
   var Item = Backbone.Model.extend({
     defaults: {
-      part1: 'hello',
-      part2: 'world'
+      part1: 'hello'
     }
   });
 
@@ -15,7 +14,6 @@
     tagName: 'li', // name of tag to be created        
     // `ItemView`s now respond to two clickable actions for each `Item`: swap and delete.
     events: { 
-      'click span.swap':  'swap',
       'click span.delete': 'remove'
     },    
     // `initialize()` now binds model change/removal to the corresponding handlers below.
@@ -27,26 +25,18 @@
     },
     // `render()` now includes two extra `span`s corresponding to the actions swap and delete.
     render: function(){
-      $(this.el).html('<span style="color:black;">'+this.model.get('part1')+' '+this.model.get('part2')+'</span> &nbsp; &nbsp; <span class="swap" style="font-family:sans-serif; color:blue; cursor:pointer;">[swap]</span> <span class="delete" style="cursor:pointer; color:red; font-family:sans-serif;">[delete]</span>');
+      $(this.el).html('<span style="color:black;">'+this.model.get('part1')+'</span> &nbsp; &nbsp; <span class="delete" style="cursor:pointer; color:red; font-family:sans-serif;">[delete]</span>');
       return this; // for chainable calls, like .render().el
     },
     // `unrender()`: Makes Model remove itself from the DOM.
     unrender: function(){
       $(this.el).remove();
     },
-    // `swap()` will interchange an `Item`'s attributes. When the `.set()` model function is called, the event `change` will be triggered.
-    swap: function(){
-      var swapped = {
-        part1: this.model.get('part2'), 
-        part2: this.model.get('part1')
-      };
-      this.model.set(swapped);
-    },
     // `remove()`: We use the method `destroy()` to remove a model from its collection. Normally this would also delete the record from its persistent storage, but we have overridden that (see above).
     remove: function(){
       this.model.destroy();
     }
-  });*/
+  });
 
 	var ListView = Backbone.View.extend({
 		el: $('script'), // el attaches to existing element
@@ -58,11 +48,13 @@
 			_.bindAll(this, 'addItem'); // every function that uses 'this' as the current object should be in here
 		},
 
-		addItem: function(){
-			//$('ul', this.el).append("<li>"+document.getElementById("textarea1")+this.counter+"</li>");
-			$('ul', this.el).append("<li>"+"hello"+this.counter+"</li>");
+		appendItem: function(item){
+		  var itemView = new ItemView({
+			model: item
+		  });
+		  $('ul', this.el).append(itemView.render().el);
 		}
-	});
+  });
 
 	var listView = new ListView();
 })(jQuery);
