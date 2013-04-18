@@ -59,7 +59,8 @@
 		},
 
 		addItem: function(){
-			$('ul', this.el).append("<li>"+document.getElementById("textarea1")+this.counter+"</li>");
+			//$('ul', this.el).append("<li>"+document.getElementById("textarea1")+this.counter+"</li>");
+			$('ul', this.el).append("<li>"+"hello"+this.counter+"</li>");
 		}
 	});
 
