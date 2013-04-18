@@ -6,7 +6,8 @@
   
   var Item = Backbone.Model.extend({
     defaults: {
-      part1: 'hello'
+      //part1: 'hello'
+	  part1: document.getElementById("textarea1").value
     }
   });
 
@@ -39,7 +40,7 @@
   });
 
 	var ListView = Backbone.View.extend({
-		el: $('script'), // el attaches to existing element
+		el: $('html'), // el attaches to existing element
 
 		events: {
 			'click button#add': 'addItem'
