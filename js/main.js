@@ -28,11 +28,11 @@ window.Page1View = Backbone.View.extend({
     },
 
 	addItem: function(){
-		$('.2', this.el).append("<li>"+ document.getElementById("textarea1").value +" <span class=\"delete\" style=\"cursor:pointer; color:red; font-family:sans-serif;\">[delete]</span> </li>");
+		$('.2', this.el).append("<li>"+ document.getElementById("textarea1").value +" <span class=\"delete\" style=\"cursor:pointer; color:red; font-family:sans-serif;\">[X]</span> </li>");
 	},
 
     remove: function(){
-		this.el.destroy();
+		this.model.destroy();
     }
 });
 
