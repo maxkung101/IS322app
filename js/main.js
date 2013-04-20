@@ -19,7 +19,7 @@ window.Page1View = Backbone.View.extend({
 
     render:function (eventName) {
         $(this.el).html(this.template());
-		$('.2', this.el).append("<button id='note'>Submit</button>");
+		$('.2', this.el).append("<button id='note'>Write</button>");
         return this;
     },
 
@@ -32,7 +32,7 @@ window.Page1View = Backbone.View.extend({
 	},
 
     remove: function(){
-		this.model.destroy();
+		this.el.destroy();
     }
 });
 
