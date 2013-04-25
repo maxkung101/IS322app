@@ -28,11 +28,12 @@ window.Page1View = Backbone.View.extend({
     },
 
 	addItem: function(){
-		$('.2', this.el).append("<li>"+ document.getElementById("textarea1").value +" <span class=\"delete\" style=\"cursor:pointer; color:red; font-family:sans-serif;\">[X]</span> </li>");
+		$('.2', this.el).append("<li>"+ document.getElementById("textarea1").value +" <span class=\"delete\" style=\"cursor:pointer; color:red; font-family:sans-serif;\" onMouseOver=\"document.Imgs.src='img/close_over.png'\" onMouseOut=\"document.Imgs.src='img/close.png'\"><img src=\"img/close.png\" name=\"Imgs\" width=\"15\" height=\"15\"></span> </li>");
 	},
 
     remove: function(){
 		this.model.destroy();
+		//this.Item.destroy();
     }
 });
 
