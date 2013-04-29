@@ -1,3 +1,15 @@
+/*var Item = Backbone.Model.extend({
+  defaults: {
+	part1: ''
+  }
+});
+
+var List = Backbone.Collection.extend({
+  model: Item
+});
+*/
+var notes = new Backbone.Collection.extend;
+
 window.HomeView = Backbone.View.extend({
 
     template:_.template($('#home').html()),
@@ -28,12 +40,34 @@ window.Page1View = Backbone.View.extend({
     },
 
 	addItem: function(){
-		$('.2', this.el).append("<li>"+ document.getElementById("textarea1").value +" <span class=\"delete\" style=\"cursor:pointer; color:red; font-family:sans-serif;\" onMouseOver=\"document.Imgs.src='img/close_over.png'\" onMouseOut=\"document.Imgs.src='img/close.png'\"><img src=\"img/close.png\" name=\"Imgs\" width=\"15\" height=\"15\"></span> </li>");
+		//this.model.set("part1", document.getElementById("textarea1").value);
+		// this.model.get("part1")
+		$('.2', this.el).append("<li>"
+			+ document.getElementById("textarea1").value
+			+ " <span class=\"delete\" "
+			+ "style=\"cursor:pointer;\" "
+			+ "onMouseOver=\"document.Imgs.src='img/close_over.png'\" "
+			+ "onMouseOut=\"document.Imgs.src='img/close.png'\">"
+			+ "<img src=\"img/close.png\" name=\"Imgs\" width=\"15\" height=\"15\">"
+			+ "</span> </li>");
+		/*notes.on("add", function(n) {
+			$('.2', this.el).append("<li>"
+				+ n.get("name")
+				+ " <span class=\"delete\" "
+				+ "style=\"cursor:pointer;\" "
+				+ "onMouseOver=\"document.Imgs.src='img/close_over.png'\" "
+				+ "onMouseOut=\"document.Imgs.src='img/close.png'\">"
+				+ "<img src=\"img/close.png\" name=\"Imgs\" width=\"15\" height=\"15\">"
+				+ "</span> </li>");
+		});
+		notes.add([
+			{name: document.getElementById("textarea1").value}
+		]);*/
 	},
 
     remove: function(){
-		this.model.destroy();
-		//this.Item.destroy();
+		//this.model.destroy();
+		this.note.destroy();
     }
 });
 
