@@ -1,4 +1,9 @@
 /*! jQuery Mobile v1.0.1 jquerymobile.com | jquery.org/license */
+#aa{
+	text-align: center;
+	font-size:  10px;
+}
+
 .ui-bar-a{
 	border:1px solid #2a2a2a;
 	background:#111;color:#fff;
