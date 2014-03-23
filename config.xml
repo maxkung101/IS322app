@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- config.xml reference:
+     https://build.phonegap.com/docs/config-xml -->
+
+
+<widget xmlns 	  = "http://www.w3.org/ns/widgets"
+        xmlns:gap = "http://phonegap.com/ns/1.0"
+        id        = "edu.njit.jimmch.phonegap02"
+        version   = "1.0.0">
+
+	<!--
+		id: the unique identifier for your application. 
+		To support all supported platforms, this must be 
+		reverse-domain name style 
+		(e.g. com.yourcompany.yourapp)		
+		
+		NOTE:  This causes a distinct app to be installed.
+			   if the id is the same the app overwrites
+			   an existing app of same id, regardless of
+			   the name element below and regardless of
+			   the filename!		
+		-->
+		
+    <name>Compass + Connection</name>
+
+    <!-- Define app icon for each platform. -->
+    <icon src="icon.png" />
+
+	 <preference name="phonegap-version" value="3.1.0" />
+
+</widget>
